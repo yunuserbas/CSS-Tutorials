@@ -20,3 +20,7 @@ some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,123123
 
 
 # 5- How much older is Sherrod Brown (a member of congress) compared to the average of members of congress? How about Dianne Feinstein?
+
+
+# 6- Who are the oldest members of congress?
+
