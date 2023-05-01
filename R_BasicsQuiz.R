@@ -1,4 +1,12 @@
 
+my_object <- (2/4)*5
+
+MyVector <- c(1, 2, 3)
+
+my_string_vector <- c("this", "is", "a", "vector")
+
+
+
 # 1- Extract the third element of the vector using numerical indexing.
 
 random_vector <- c("R","is","great")
