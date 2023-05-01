@@ -5,6 +5,8 @@ MyVector <- c(1, 2, 3)
 
 my_string_vector <- c("this", "is", "a", "vector")
 
+mean(MyVector)
+
 
 
 # 1- Extract the third element of the vector using numerical indexing.
