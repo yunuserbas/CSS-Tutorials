@@ -11,6 +11,7 @@ MyVector[3]
 
 load("~/Desktop/Coronavirus Tests.Rdata")
 
+setwd("~/Desktop")
 
 
 # 1- Extract the third element of the vector using numerical indexing.
