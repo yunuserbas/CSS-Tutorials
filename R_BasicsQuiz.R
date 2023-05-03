@@ -9,6 +9,8 @@ mean(MyVector)
 
 MyVector[3]
 
+load("~/Desktop/Coronavirus Tests.Rdata")
+
 
 
 # 1- Extract the third element of the vector using numerical indexing.
