@@ -13,6 +13,7 @@ load("~/Desktop/Coronavirus Tests.Rdata")
 
 setwd("~/Desktop")
 
+covid_tweets$tweet_text
 
 # 1- Extract the third element of the vector using numerical indexing.
 
