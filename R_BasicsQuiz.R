@@ -15,6 +15,8 @@ setwd("~/Desktop")
 
 covid_tweets$tweet_text
 
+covid_tweets$tweet_text[3]
+
 # 1- Extract the third element of the vector using numerical indexing.
 
 random_vector <- c("R","is","great")
@@ -39,4 +41,6 @@ some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,123123
 
 
 # 6- Who are the oldest members of congress?
+
+
 
