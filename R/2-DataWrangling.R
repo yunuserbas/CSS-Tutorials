@@ -28,3 +28,9 @@ pipe operator ("%>%"):
 # Note: not every congress member has an account on all three platform, so be sure to filter.
 # Note: you may need to look up the documentation for pivot_longer.
 
+# 7. write code to print only the states who implemented both travel restrictions and mask requirements:
+
+# 8. Write code to print the states who had implemented mask requirements but not travel restrictions:
+
+
+
