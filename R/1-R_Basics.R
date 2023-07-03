@@ -1,5 +1,4 @@
 
-
 my_object <- (2/4)*5
 
 MyVector <- c(1, 2, 3)
@@ -21,7 +20,6 @@ covid_tweets$tweet_text[3]
 # 1- Extract the third element of the vector using numerical indexing.
 
 random_vector <- c("R","is","great")
-
 
 
 
