@@ -58,9 +58,21 @@ typeof(congress)
 
 # 5- What is the average age of all congress members? What is the data type of the birthyear column?
 
+avg_year <- as.integer(mean(congress$birthyear))
+avg_age <- 2022-avg_year
+avg_age
+
+typeof(congress$birthyear)
 
 # 6- How much older is Sherrod Brown (a member of congress) compared to the average of members of congress? How about Dianne Feinstein?
 
+brown_row <- congress |> filter(full_name=="Sherrod Brown")
+brown_age <- 2022 - brown_row$birthyear
+brown_age - avg_age
+
+feinstein_row <- congress |> filter(full_name=="Dianne Feinstein")
+feinstein_age <- 2022 - feinstein_row$birthyear
+feinstein_age - avg_age
 
 # 7- Who are the oldest members of congress?
 
