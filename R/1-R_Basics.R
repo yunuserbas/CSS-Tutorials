@@ -1,4 +1,6 @@
 
+# Notes and Comments From The Course
+
 my_object <- (2/4)*5
 
 MyVector <- c(1, 2, 3)
@@ -75,6 +77,10 @@ feinstein_age <- 2022 - feinstein_row$birthyear
 feinstein_age - avg_age
 
 # 7- Who are the oldest members of congress?
+
+congress <- arrange(congress, birthyear)
+
+head(congress)
 
 
 
