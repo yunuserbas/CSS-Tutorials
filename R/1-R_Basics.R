@@ -1,4 +1,4 @@
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee76aQ67e
+
 my_object <- (2/4)*5
 
 MyVector <- c(1, 2, 3)
@@ -32,8 +32,6 @@ random_vector <- c("R","is","great")
 
 random_vector[3]
 
-## "great"
-
 # 3- Use R code to identify the data type of some_vector. What is the largest number in this vector? How about the mean value?
 
 some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,12312312,111231,
@@ -49,6 +47,14 @@ mean(some_vector)
 
 # 4- How many rows and columns does the congress dataframe have? Use a function to show its data type. You must use R code to generate these values.
 
+library(tidyverse)
+load(url('https://dssoc.github.io/datasets/congress.RData'))
+
+nrow(congress)
+
+ncol(congress)
+
+typeof(congress)
 
 # 5- What is the average age of all congress members? What is the data type of the birthyear column?
 
