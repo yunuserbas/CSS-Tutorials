@@ -32,6 +32,11 @@ df2[1,]
 # 4. Using mutate, create a new variable called age which represents the approximate age of each member of congress. How many democratic senators are over 60 years old?
 # Note: you can approximate age using the formula age = 2021-birthyear.
 
+df <- congress |> filter(party=='Democrat' & type=='sen') |> mutate (age=2022-birthyear)
+
+df2 <- df |> filter(age>60)
+nrow(df2)
+
 # 5. Create a new column that indicates whether or not the member of congress is more than 55 years old, 
 # and create a single dataframe showing the number of male and female members of congress that are over and under 55.
 # Note: the dataframe should have four rows: number of females over 55, number of males over 55, number of females under 55, number of males under 55.
