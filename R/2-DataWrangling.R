@@ -20,6 +20,10 @@ count(df, gender, party)
 
 # 3. Identify the oldest and youngest male and female democrat senators using tidyverse functions.
 
+df2 <- congress |> filter(gender=='M' & party=='Democrat')|> arrange(birthyear)
+
+df2[1,]
+
 # 4. Using mutate, create a new variable called age which represents the approximate age of each member of congress. How many democratic senators are over 60 years old?
 # Note: you can approximate age using the formula age = 2021-birthyear.
 
