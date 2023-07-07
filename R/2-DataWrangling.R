@@ -41,6 +41,11 @@ nrow(df2)
 # and create a single dataframe showing the number of male and female members of congress that are over and under 55.
 # Note: the dataframe should have four rows: number of females over 55, number of males over 55, number of females under 55, number of males under 55.
 
+df <- congress |> mutate(age=2022-birthyear)
+df <- df |> mutate(over55=ifelse(age>55,1, 0))
+
+count(df, gender, over55)
+
 # 6. Using gather, create a new dataframe where each row corresponds to a valid twitter, facebook, or youtube social media account, then compute the total number of accounts for each political party. 
 # Then do the same with pivot_longer.
 # Note: not every congress member has an account on all three platform, so be sure to filter.
