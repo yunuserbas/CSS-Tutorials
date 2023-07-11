@@ -79,5 +79,5 @@ intersect(travel_restrictions, require_masks)
 
 # 8. Write code to print the states who had implemented mask requirements but not travel restrictions:
 
-
+setdiff(require_masks, travel_restrictions)
 
