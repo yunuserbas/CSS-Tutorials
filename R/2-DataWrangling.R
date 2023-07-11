@@ -70,6 +70,13 @@ all3accounts_join2Summary
 
 # 7. write code to print only the states who implemented both travel restrictions and mask requirements:
 
+travel_restrictions <- c("WA", "OR", "NV", "CA", "NM", "MN", "IL", "OH", "MI", "PA", "VA", "NY", "MA")
+
+require_masks <- c("HI", "WA", "OR", "NV", "CA", "MT", "CO", "NM", "KS", "TX", "MN", "AR", "LA", "WI")
+
+intersect(travel_restrictions, require_masks)
+
+
 # 8. Write code to print the states who had implemented mask requirements but not travel restrictions:
 
 
