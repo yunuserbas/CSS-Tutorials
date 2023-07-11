@@ -59,6 +59,15 @@ all3accounts_join <- joined_df |> filter(nchar(social_account)>0)
 all3accounts_joinSummary <- all3accounts_join |>group_by(party)|> summarise(n=n())
 all3accounts_joinSummary
 
+pivot_longer_form <- congress_contact |>
+pivot_longer("twitter":"youtube", names_to = "social_account")
+
+joined_df2 <- inner_join(congress, pivot_longer_form)
+
+all3accounts_join2 <- joined_df2 |> filter(nchar(value)>0)
+all3accounts_join2Summary <- all3accounts_join2 |>group_by(party)|> summarise(n=n())
+all3accounts_join2Summary
+
 # 7. write code to print only the states who implemented both travel restrictions and mask requirements:
 
 # 8. Write code to print the states who had implemented mask requirements but not travel restrictions:
