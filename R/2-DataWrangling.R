@@ -1,4 +1,3 @@
-
 # Questions
 
 # 1. Describe what the following tidyverse functions do. Also describe the pipe operator “%>%”. You may need to look up the official documentation for each of these.
