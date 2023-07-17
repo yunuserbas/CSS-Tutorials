@@ -15,4 +15,5 @@ random_vector[3]
 some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,12312312,111231,1231231,123123)
 
 typeof(some_vector)
-
+max(some_vector)
+mean(some_vector)
