@@ -17,3 +17,14 @@ some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,123123
 typeof(some_vector)
 max(some_vector)
 mean(some_vector)
+
+# 4. How many rows and columns does the congress dataframe have? Use a function to show its data type. You must use R code to generate these values.
+
+library(tidyverse)
+
+load(url('https://dssoc.github.io/datasets/congress.RData'))
+
+nrow(congress)
+ncol(congress)
+typeof(congress)
+
