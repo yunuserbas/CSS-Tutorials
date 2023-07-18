@@ -34,3 +34,6 @@ avg_year <- as.integer(mean(congress$birthyear))
 avg_age <- 2022-avg_year
 avg_age
 
+typeof(congress$birthyear)
+
+
