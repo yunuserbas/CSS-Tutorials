@@ -28,3 +28,9 @@ nrow(congress)
 ncol(congress)
 typeof(congress)
 
+# 5. What is the average age of all congress members? What is the data type of the birthyear column?
+
+avg_year <- as.integer(mean(congress$birthyear))
+avg_age <- 2022-avg_year
+avg_age
+
