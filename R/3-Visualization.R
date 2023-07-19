@@ -34,15 +34,24 @@ geom_bar(stat = "identity")
 
 p
 
-# 4. How many rows and columns does the congress dataframe have? Use a function to show its data type. You must use R code to generate these values.
+# 4. Create a bar plot showing the number of members that belong to the 10 largest congressional committees (i.e. committees with the largest number of members). 
+# The bars should be sorted based on committee sizes.
 
-library(tidyverse)
+# Note: Our standard for visualizations is that each plot should have axis labels, all labels must be readable, and we should easily be able to tell what your figure is showing. 
+# Failure to do this will result in point deductions
 
-load(url('https://dssoc.github.io/datasets/congress.RData'))
+combined <- inner_join(congress, committee_memberships, "bioguide_id")
+combined <- combined |> group_by(thomas_id) |> summarise(n=n())
+combined <- combined[order(combined$n),]
+top_ten <- tail(combined, n=10)
 
-nrow(congress)
-ncol(congress)
-typeof(congress)
+top_ten$thomas_id <- as.vector(top_ten$thomas_id) #get rid of factors
+top_ten$thomas_id <- factor(top_ten$thomas_id,top_ten$thomas_id)
+
+p <- ggplot(data=top_ten, aes(x=thomas_id, y=n)) +
+geom_bar(stat = "identity")
+
+p
 
 # 5. What is the average age of all congress members? What is the data type of the birthyear column?
 
