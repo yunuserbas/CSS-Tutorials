@@ -29,6 +29,11 @@ combined <- combined |> group_by(bioguide_id, party.x) |> summarise(n=n()) |> gr
 
 combined <- combined |> filter(party.x!='Independent')
 
+p <- ggplot(data=combined, aes(x=party.x, y=avg_num_accounts_by_party)) +
+geom_bar(stat = "identity")
+
+p
+
 # 4. How many rows and columns does the congress dataframe have? Use a function to show its data type. You must use R code to generate these values.
 
 library(tidyverse)
