@@ -53,13 +53,27 @@ geom_bar(stat = "identity")
 
 p
 
-# 5. What is the average age of all congress members? What is the data type of the birthyear column?
+# 5. Create a single bar plot that shows the average age of the committees with the 5 highest and lowest average ages. 
+# The bars should be sorted based on average committee ages. Which committees have the highest and lowest average ages?
 
-avg_year <- as.integer(mean(congress$birthyear))
-avg_age <- 2022-avg_year
-avg_age
 
-typeof(congress$birthyear)
+combined <- inner_join(congress, committee_memberships, "bioguide_id")
+combined <- combined |> mutate (age = as.numeric(Sys.Date()-birthdate)/365)
+
+combined <- combined |> group_by(thomas_id) |> summarise(avg_age=mean(age))
+combined <- combined[order(combined$avg_age),]
+
+top_five <- head(combined)
+bottom_five <- tail(combined)
+
+top_five$thomas_id <- as.vector(top_five$thomas_id) #get rid of factors
+top_five$thomas_id <- factor(top_five$thomas_id,top_five$thomas_id)
+
+p <- ggplot(data=top_five, aes(x=thomas_id, y=avg_age)) +
+geom_bar(stat = "identity")
+
+p
+
 
 
 # 6. 
