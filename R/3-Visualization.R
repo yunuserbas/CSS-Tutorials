@@ -22,11 +22,12 @@ p
 # 3. Use an inner join to combine the columns of the committees dataframe with the columns of congress, and create a plot showing the average number of committees that democrats and republicans belong to. Next
 # create a plot showing the averages by gender (note: this second part should include members of other parties as well).
 
-some_vector <- c(25555,342343,123123123,4234234,53243234,54324234,5421111,12312312,111231,1231231,123123)
+load(url('https://dssoc.github.io/datasets/committees.RData'))
 
-typeof(some_vector)
-max(some_vector)
-mean(some_vector)
+combined <- inner_join(congress, committee_memberships, "bioguide_id")
+combined <- combined |> group_by(bioguide_id, party.x) |> summarise(n=n()) |> group_by(party.x) |> summarise
+
+combined <- combined |> filter(party.x!='Independent')
 
 # 4. How many rows and columns does the congress dataframe have? Use a function to show its data type. You must use R code to generate these values.
 
