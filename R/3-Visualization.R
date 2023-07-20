@@ -74,6 +74,6 @@ geom_bar(stat = "identity")
 
 p
 
+# 6. Create a line graph showing the total number of politician births in each decade since the 1930’s, with separate lines for senate and house members (see the type column). The labels on your x-axis should look like
+# “1930’s”, “1940’s”, and so on, and your legend should show values “Senator” and “Representative” (i.e. not rep and sen).
 
-
-# 6. 
