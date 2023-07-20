@@ -77,3 +77,12 @@ p
 # 6. Create a line graph showing the total number of politician births in each decade since the 1930’s, with separate lines for senate and house members (see the type column). The labels on your x-axis should look like
 # “1930’s”, “1940’s”, and so on, and your legend should show values “Senator” and “Representative” (i.e. not rep and sen).
 
+combined <- inner_join(congress, committee_memberships, "bioguide_id")
+combined <- combined |> group_by(type, decade) |> summarise(count=n())
+
+combined <- combined |> mutate(type=if_else(type=="sen", "Senator", "Representative"))
+
+p <- ggplot(data=combined, aes(x=decade, y=count, color=type)) + geom_point()
+
+p
+
