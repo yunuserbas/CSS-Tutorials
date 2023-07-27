@@ -98,3 +98,7 @@ df <- df|> mutate(day=wday(birthdate, label=TRUE))
 p<-ggplot(data=df, aes(x=factor(month))) +
 geom_bar()
 p
+
+p<-ggplot(data=df, aes(x=factor(day))) +
+geom_bar()
+p
