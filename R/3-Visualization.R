@@ -92,4 +92,9 @@ p
 
 library(lubridate)
 
+df <- congress|> mutate(month=month(birthdate, label=TRUE))
+df <- df|> mutate(day=wday(birthdate, label=TRUE))
 
+p<-ggplot(data=df, aes(x=factor(month))) +
+geom_bar()
+p
