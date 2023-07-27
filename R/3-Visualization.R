@@ -86,3 +86,10 @@ p <- ggplot(data=combined, aes(x=decade, y=count, color=type)) + geom_point()
 
 p
 
+# 7. Create a bar chart showing the frequency of politician births by month and another bar chart showing politician births by weekday. 
+# The x-labels should be month names and weekday names, respectively, and appear in chronological order.
+# Note: you can use the lubridate package methods to get weekday and month names
+
+library(lubridate)
+
+
