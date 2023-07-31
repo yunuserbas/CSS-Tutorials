@@ -21,3 +21,11 @@ first_char(sentence)
 
 # 3. Create your own function which accepts a birthyear vector and returns an approximate current age, 
 # then use it on the birthyear column of the congress dataframe to create a new age column with mutate
+
+year_to_age <- function(date) {
+  age <- as.integer((today()-date)/365)
+  return (age)
+}
+
+df <- congress |> mutate (age = year_to_age(birthdate))
+
