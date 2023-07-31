@@ -11,10 +11,11 @@ Outside RStudio: R documentation
 sentence <- c('you', 'only', 'understand', 'data', 'if', 'data', 'is', 'tidy')
 
 first_char <- function(char_vector) { 
-output_char_vector <- c()
-for(word in char_vector){ output_char_vector <- append(output_char_vector, substr(word, 1, 1))
-}
-return (output_char_vector)
+  output_char_vector <- c()
+  for(word in char_vector){
+    output_char_vector <- append(output_char_vector, substr(word, 1, 1))
+  }
+  return (output_char_vector)
 }
 
 first_char(sentence)
