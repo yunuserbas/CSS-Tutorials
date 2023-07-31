@@ -18,3 +18,6 @@ return (output_char_vector)
 }
 
 first_char(sentence)
+
+# 3. Create your own function which accepts a birthyear vector and returns an approximate current age, 
+# then use it on the birthyear column of the congress dataframe to create a new age column with mutate
