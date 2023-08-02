@@ -39,3 +39,14 @@ year_to_age <- function(date) {
 }
 
 df <- congress |> mutate (age = year_to_age(birthdate))
+
+# 5. Write a function that accepts a date string and returns the day of the week it corresponds to, 
+# then use it to create a new column of congress representing the weekday of the birth of each politician using mutate.
+
+date_to_weekday <- function(date) {
+  weekday <- wday(date, label=TRUE)
+  return (weekday)
+}
+
+df <- congress |> mutate (weekday = date_to_weekday(birthdate))
+
