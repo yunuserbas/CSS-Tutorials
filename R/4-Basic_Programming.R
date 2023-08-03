@@ -50,3 +50,9 @@ date_to_weekday <- function(date) {
 
 df <- congress |> mutate (weekday = date_to_weekday(birthdate))
 
+# 6. Write a function that accepts a dataframe with the columns birthday and full_name, and prints the names and 
+# ages of the k oldest representatives in congress (i.e. not including senators) using a “for loop”. In this sense, 
+# k is an arbitrary number that should be given as an argument to the function - set the default value to be 5. 
+# If you use the dataframe as the first argument, you can use the pipe operator (“%>%”) to pass the dataframe directly to the function. 
+# Define your function such that you can use it like this: congress %>% print_oldest(3).
+
