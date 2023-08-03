@@ -71,5 +71,9 @@ oldest_reps <- function(df, k) {
   }
 }
 
+df <- congress |> select(c('full_name', 'birthdate'))
+
+df |> oldest_reps(10)
+
 
 
