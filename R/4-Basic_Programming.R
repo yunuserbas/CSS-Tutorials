@@ -56,3 +56,20 @@ df <- congress |> mutate (weekday = date_to_weekday(birthdate))
 # If you use the dataframe as the first argument, you can use the pipe operator (“%>%”) to pass the dataframe directly to the function. 
 # Define your function such that you can use it like this: congress %>% print_oldest(3).
 
+oldest_reps <- function(df, k) {
+  df <- inner_join(congress, df, "full_name")
+  df <- df|> filter(type=="rep")
+##sort df by age
+  df <- df|> mutate (age = year_to_age(birthdate.x))
+  df <- df[order(df$age),]
+  last_k <- tail(df, n=k)
+  for(row in 1:k){
+    name <- last_k[row, "full_name"]
+    age <- as.character(last_k[row, "age"])
+    full <- paste0(name, " ", age)
+    print(full)
+  }
+}
+
+
+
