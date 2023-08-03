@@ -75,5 +75,9 @@ df <- congress |> select(c('full_name', 'birthdate'))
 
 df |> oldest_reps(10)
 
+# 7. Starting with the function from the previous question, change it such that if k > 5, it only prints the first 5.
+# Test it using this code: congress %>% print_oldest(100).
+
+
 
 
