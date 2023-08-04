@@ -97,4 +97,8 @@ oldest_reps2 <- function(df, k) {
   }
 }
 
+df <- congress|> select(c('full_name', 'birthdate'))
+
+
+
 
