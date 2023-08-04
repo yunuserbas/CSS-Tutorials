@@ -78,6 +78,23 @@ df |> oldest_reps(10)
 # 7. Starting with the function from the previous question, change it such that if k > 5, it only prints the first 5.
 # Test it using this code: congress %>% print_oldest(100).
 
-
+oldest_reps2 <- function(df, k) {
+  df <- inner_join(congress, df, "full_name")
+  df <- df|> filter(type=="rep")
+  
+  ##sort df by age
+  df <- df|> mutate (age = year_to_age(birthdate.x))
+  df <- df[order(df$age),]
+  if (k>5){
+    k <- 5
+  }
+  last_k <- tail(df, n=k)
+  for(row in 1:k){
+    name <- last_k[row, "full_name"]
+    age <- as.character(last_k[row, "age"])
+    full <- paste0(name, " ", age)
+    print(full)
+  }
+}
 
 
