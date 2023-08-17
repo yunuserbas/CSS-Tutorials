@@ -22,3 +22,7 @@ for(row in 1:nrow(combined)){
     new <- rbind(new, combined[row, ])
   }
 }
+
+# Creating summary statistics of these variables
+
+summary(new)
