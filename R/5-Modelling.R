@@ -11,3 +11,14 @@ perc_titles <- combined |> group_by(bioguide_id) |> mutate(title_count=if_else(!
 combined <- inner_join(combined, perc_titles, "bioguide_id")
 combined <- combined |> mutate(title_perc=title_sum/n)
 
+# Select only one row for each name
+
+new <- data.frame()
+
+for(row in 1:nrow(combined)){
+  id <- combined[row, "bioguide_id"]
+  
+  if (!(id %in% new$bioguide_id)){
+    new <- rbind(new, combined[row, ])
+  }
+}
