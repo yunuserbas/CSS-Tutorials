@@ -26,3 +26,10 @@ for(row in 1:nrow(combined)){
 # Creating summary statistics of these variables
 
 summary(new)
+
+# 2. Create a linear model predicting the number of committees that members belong to from age, then create a scatter plot with a linear trendline. Describe the relationship. 
+# What do each of these (the model summary and the plot) show that you cannot see from the other?
+# Note: usually we see the dependent variable (number of committees in this case) on the y-axis and the independent variable on the x-axis.
+
+
+
