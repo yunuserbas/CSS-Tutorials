@@ -42,4 +42,10 @@ p
 # 3. Create a bar graph showing the average number of committees that congress members belong to by gender (i.e. a bar for M and a bar for F) with error bars. 
 # What can you see from this visualization? Does there appear to be a significant difference?
 
+by_gender <- new |> group_by(gender) |> summarise(sd=sd(n), mean=mean(n))
+
+p<-ggplot(data=by_gender, aes(x=gender, y=mean)) +
+  geom_bar(stat="identity") +
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd))
+p
 
