@@ -31,5 +31,12 @@ summary(new)
 # What do each of these (the model summary and the plot) show that you cannot see from the other?
 # Note: usually we see the dependent variable (number of committees in this case) on the y-axis and the independent variable on the x-axis.
 
+m1 <- lm(n~age, new)
+summary(m1)
+
+p<-ggplot(data=new, aes(x=age, y=n)) +
+  geom_point()+
+  geom_smooth(method=lm)
+p
 
 
