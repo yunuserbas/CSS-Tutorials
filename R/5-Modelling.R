@@ -61,3 +61,12 @@ summary(m2)
 # and how it might differ by gender.
 
 library(ggiraph)
+
+library(ggiraphExtra)
+
+dem_only <- new |> filter(party.x=="Democrat")
+
+p<-ggplot(data=dem_only, aes(x=age, y=title_perc, color=gender)) +
+  geom_point()+
+  geom_smooth(method=lm)
+p
