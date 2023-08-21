@@ -55,3 +55,9 @@ p
 m2 <- lm(title_perc~ age + gender + party.x, new)
 summary(m2)
 
+# 5. Use the model from the previous question to make a scatter plot that includes prediction lines for BOTH F and M Democrats. 
+# That is, your plot should include two prediction lines - one for M and one for F, and the visualization (not the model) should only include democrats. 
+# This is important because our original model included information about all the variables, but we mainly want to visualize a single relationship, 
+# and how it might differ by gender.
+
+library(ggiraph)
