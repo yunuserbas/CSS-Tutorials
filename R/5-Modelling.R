@@ -70,3 +70,6 @@ p<-ggplot(data=dem_only, aes(x=age, y=title_perc, color=gender)) +
   geom_point()+
   geom_smooth(method=lm)
 p
+
+p <- ggPredict(m2)
+p
