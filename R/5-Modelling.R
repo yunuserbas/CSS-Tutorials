@@ -51,3 +51,7 @@ p
 
 # 4. Construct a model predicting the percentage of time that a member holds a title in the committees they belong to from age, gender, and political party. 
 # Which variables might be related to holding a title? Try removing and adding different variables. Does changing any of the used variables change your original interpretation?
+
+m2 <- lm(title_perc~ age + gender + party.x, new)
+summary(m2)
+
