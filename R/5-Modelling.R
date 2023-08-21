@@ -49,3 +49,5 @@ p<-ggplot(data=by_gender, aes(x=gender, y=mean)) +
   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd))
 p
 
+# 4. Construct a model predicting the percentage of time that a member holds a title in the committees they belong to from age, gender, and political party. 
+# Which variables might be related to holding a title? Try removing and adding different variables. Does changing any of the used variables change your original interpretation?
