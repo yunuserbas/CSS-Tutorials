@@ -44,7 +44,7 @@ p
 
 by_gender <- new |> group_by(gender) |> summarise(sd=sd(n), mean=mean(n))
 
-p<-ggplot(data=by_gender, aes(x=gender, y=mean)) +
+p <-ggplot(data=by_gender, aes(x=gender, y=mean)) +
   geom_bar(stat="identity") +
   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd))
 p
@@ -66,10 +66,11 @@ library(ggiraphExtra)
 
 dem_only <- new |> filter(party.x=="Democrat")
 
-p<-ggplot(data=dem_only, aes(x=age, y=title_perc, color=gender)) +
+p <-ggplot(data=dem_only, aes(x=age, y=title_perc, color=gender)) +
   geom_point()+
   geom_smooth(method=lm)
 p
+
 
 p <- ggPredict(m2)
 p
